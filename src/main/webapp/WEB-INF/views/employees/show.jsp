@@ -10,6 +10,7 @@
 
 <c:import url="/WEB-INF/views/layout/app.jsp">
     <c:param name="content">
+
         <h2>id : ${employee.id} の従業員情報 詳細ページ</h2>
 
         <table>
@@ -43,7 +44,11 @@
         </table>
 
         <p>
-            <a href="<c:url value='?action${actEmp}&command=${commIdx}' />">一覧に戻る</a>
+            <a href="<c:url value='?action=${actEmp}&command=${commEdit}&id=${employee.id}' />">この従業員情報を編集する</a>
+        </p>
+
+        <p>
+            <a href="<c:url value='?action=${actEmp}&command=${commIdx}' />">一覧に戻る</a>
         </p>
     </c:param>
 </c:import>
